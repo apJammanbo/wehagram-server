@@ -1,0 +1,10 @@
+endpoint: https://wehgram-570e686ffa.herokuapp.com/wehagram/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - prisma generate
